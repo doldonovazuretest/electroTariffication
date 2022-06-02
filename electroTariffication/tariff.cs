@@ -20,7 +20,7 @@
             _calculate = calculationFormula;
         }
 
-        public cost getCostData(int consulmtion) => new cost(_name, _calculate.Invoke(new Tuple<int, tarifParameters>(consulmtion, _tarifParameters)));
+        public cost getCostData(int consumption) => new cost(_name, _calculate.Invoke(new Tuple<int, tarifParameters>(consumption, _tarifParameters)));
 
         public decimal baseRate => _tarifParameters.baseRate;
         public decimal additionalFee => _tarifParameters.additionalFee;
